@@ -1,4 +1,5 @@
 /** Powered by 友人S from HuskCat */
+/** From UCH Programming Test Q16 */
 #include <stdio.h>
 #include <stdlib.h>
 
