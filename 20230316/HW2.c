@@ -10,8 +10,8 @@ int main(void) {
 		scanf("%d:%d", &now_h, &now_m);
 		if (now_h < 0 || now_h >= 24 || now_m < 0 || now_m >= 60) continue;
 		printf("Give me end time\n");
-		if (end_h < 0 || end_h >= 24 || end_m < 0 || end_m >= 60) continue;
 		scanf("%d:%d", &end_h, &end_m);
+		if (end_h < 0 || end_h >= 24 || end_m < 0 || end_m >= 60) continue;
 		int result_h = end_h - now_h;
 		int result_m = end_m - now_m;
 		if (result_h < 0) result_h += 24;
@@ -25,7 +25,7 @@ int main(void) {
 		else if (result_m == 0 && result_h == 1) printf("Left %d Hour");
 		else if (result_h == 1) printf("Left %d Hour and %d minutes");
 		else if (result_m == 1) printf("Left %d Hours and %d minute");
-		else printf("Left %d Hours and %d Minutes");
-		return 0;
-	} while(now_h >= 0 && now_h < 24 && now_m >= 0 && now_m < 60 && end_h >= 0 && end_h < 24 && end_m >= 0 && end_m < 60);
+		else printf("Left %d Hours and %d Minutes\n");
+	} while(now_h > 0 && now_h < 24 && now_m > 0 && now_m < 60 && end_h > 0 && end_h < 24 && end_m > 0 && end_m < 60);
+	return 0;
 }
